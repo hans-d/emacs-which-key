@@ -94,7 +94,11 @@ Also adds \"..\". If nil, disable any truncation."
   :type '(choice integer (const :tag "Disable truncation" nil)))
 
 (defcustom which-key-min-column-description-width 0
-  "Every column should at least have this width."
+  "Every description column should at least have this width.
+When showing the columns at the bottom of the screen, the columns can vary in width.
+By setting this value, all descriptive columns will be at least this size. Setting it to
+a value like `which-key-max-description-length', they will be same sized. A low value of
+`0' (default) effectively does nothing."
   :group 'which-key
   :type 'integer)
 
